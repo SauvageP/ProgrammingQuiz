@@ -36,7 +36,7 @@ namespace ProgrammingQuiz
 			switch (choice.ToUpper ()) 
 			{
 				case "CS":
-					Console.Write ("C #");
+					Console.WriteLine ("C #");
 					break;
 				case "CPP":
 					Console.WriteLine ("C++");
@@ -57,26 +57,35 @@ namespace ProgrammingQuiz
 					Console.WriteLine ("Objective-C");
 					break;
 				default:
-					Console.Write ("Wrong Letters");
+					Console.WriteLine ("Wrong Letters");
 					break;
 			}
 		}
 
 		public static void StudentInfo() {
 			String name;
-			int gradYear;
+			String gradYear;
 			String schoolName;
 
 			Console.Write ("What is your name? ");
 			name = Console.ReadLine ();
 			Console.Write ("What is your graduation year? ");
-			gradYear = Console.Read ();
+			gradYear = Console.ReadLine ();
 			Console.Write ("What is the name of your school? ");
 			schoolName = Console.ReadLine ();
 
 			Console.WriteLine ("Name: " + name);
 			Console.WriteLine ("Graduation Year: " + gradYear);
 			Console.WriteLine ("School: " + schoolName);
+		}
+
+		public static void UserInput() {
+			Console.WriteLine ("Give me a string.  ");
+			String str = Console.ReadLine ();
+
+			Console.WriteLine ("Output #1");
+			Console.WriteLine (str);
+
 		}
 	}
 }
