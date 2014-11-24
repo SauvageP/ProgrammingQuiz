@@ -21,12 +21,20 @@ namespace ProgrammingQuiz
 		public static void ProgramLang()
 		{
 			Console.WriteLine ("What is your favorite programming languages? (CS, CPP, JAVA, C, etc.)");
-			String choice = Console.ReadLine ().ToUpper ();
-			switch (choice) {
-				case "CS":
+			String choice = Console.ReadLine ();
+			switch (choice.ToUpper ()) {
+			case "CS":
 					Console.Write ("C #");
 					break;
-
+			case "CPP":
+				Console.WriteLine ("C++");
+				break;
+			case "JAVA":
+				Console.WriteLine ("Java");
+				break;
+			case "C":
+				Console.WriteLine ("C");
+				break;
 			default:
 				Console.Write ("Wrong Letters");
 				break;
