@@ -6,8 +6,19 @@ namespace ProgrammingQuiz
 	{
 		public static void Main (string[] args)
 		{
-		//	HelloWorld ();
-			ProgramLang ();
+			Console.Write ("What problem # would you want? ");
+			String num = Console.ReadLine ().ToString ();
+			switch (num) {
+			case "1":
+				HelloWorld ();
+				break;
+			case "2":
+				ProgramLang ();
+				break;
+			default:
+				StudentInfo ();
+				break;
+			}
 		}
 
 		public static void HelloWorld()
@@ -22,23 +33,50 @@ namespace ProgrammingQuiz
 		{
 			Console.WriteLine ("What is your favorite programming languages? (CS, CPP, JAVA, C, etc.)");
 			String choice = Console.ReadLine ();
-			switch (choice.ToUpper ()) {
-			case "CS":
+			switch (choice.ToUpper ()) 
+			{
+				case "CS":
 					Console.Write ("C #");
 					break;
-			case "CPP":
-				Console.WriteLine ("C++");
-				break;
-			case "JAVA":
-				Console.WriteLine ("Java");
-				break;
-			case "C":
-				Console.WriteLine ("C");
-				break;
-			default:
-				Console.Write ("Wrong Letters");
-				break;
+				case "CPP":
+					Console.WriteLine ("C++");
+					break;
+				case "JAVA":
+					Console.WriteLine ("Java");
+					break;
+				case "C":
+					Console.WriteLine ("C");
+					break;
+				case "RUBY":
+					Console.WriteLine ("Ruby");
+					break;
+				case "JSON":
+					Console.WriteLine ("JavaScript");
+					break;
+				case "OBJ-C":
+					Console.WriteLine ("Objective-C");
+					break;
+				default:
+					Console.Write ("Wrong Letters");
+					break;
 			}
+		}
+
+		public static void StudentInfo() {
+			String name;
+			int gradYear;
+			String schoolName;
+
+			Console.Write ("What is your name? ");
+			name = Console.ReadLine ();
+			Console.Write ("What is your graduation year? ");
+			gradYear = Console.Read ();
+			Console.Write ("What is the name of your school? ");
+			schoolName = Console.ReadLine ();
+
+			Console.WriteLine ("Name: " + name);
+			Console.WriteLine ("Graduation Year: " + gradYear);
+			Console.WriteLine ("School: " + schoolName);
 		}
 	}
 }
